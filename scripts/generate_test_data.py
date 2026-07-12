@@ -4,6 +4,10 @@ import random
 from faker import Faker
 from app.db.connection import get_db_connection
 from app.domain.status import RequestStatus
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 fake = Faker("ru_RU")
 
@@ -19,8 +23,8 @@ def generate_data():
     cursor.execute("DELETE FROM employees")
     cursor.execute("DELETE FROM departments")
     cursor.execute("DELETE FROM positions")
-    cursor.execute("DELETE FROM statuses")
     cursor.execute("DELETE FROM status_transitions")
+    cursor.execute("DELETE FROM statuses")
     conn.commit()
 
     # Initialize statuses and transitions

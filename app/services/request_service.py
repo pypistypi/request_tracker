@@ -4,6 +4,7 @@ from app.domain.status import RequestStatus, StatusTransitionRules
 from app.domain.employee import Employee
 from app.repositories.request_repository import RequestRepository
 from app.repositories.employee_repository import EmployeeRepository
+from app.domain.department import Department
 
 class RequestService:
     def __init__(self):

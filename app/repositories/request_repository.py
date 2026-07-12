@@ -5,6 +5,7 @@ from app.domain.employee import Employee
 from app.domain.department import Department
 from app.domain.position import Position
 from app.domain.status import RequestStatus
+import sqlite3
 
 class RequestRepository:
     def _row_to_request(self, row) -> Request:
